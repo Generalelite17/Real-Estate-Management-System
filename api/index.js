@@ -17,7 +17,7 @@ mongoose
     console.log(error);
   });
 
-const app = express();
+const server = express();
 
 // TODO: Replace the following with your app's Firebase project configuration
 const firebaseConfig = {
@@ -27,15 +27,15 @@ const firebaseConfig = {
 const fb = initializeApp(firebaseConfig);
 
 //Listen to port number
-app.listen(3000, () => {
+server.listen(3000, () => {
   //Terminal run: node api/index.js -> installed nodemon and added script
   //Terminal run: npm run dev (server restarts automatically)
   console.log("Server is running on port 3000");
 });
 
 //Api Route to overslash
-app.get("/test", (req, res) => {
+server.get("/test", (req, res) => {
   res.send("Hello, world!");
 });
 
-app.use("/api/user", userRouter);
+server.use("/api/user", userRouter);
