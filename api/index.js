@@ -3,6 +3,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv"; //Be able to use env for security uploading on GitHub
+import userRouter from "./routes/user.route.js";
 dotenv.config(); //Initialize it
 
 //Connect to the database
@@ -28,3 +29,5 @@ app.listen(3000, () => {
 app.get("/test", (req, res) => {
   res.send("Hello, world!");
 });
+
+app.use("/api/user", userRouter);
