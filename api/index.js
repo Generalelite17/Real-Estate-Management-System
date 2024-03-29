@@ -4,6 +4,7 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv"; //Be able to use env for security uploading on GitHub
 import userRouter from "./routes/user.route.js";
+import initializeApp from "firebase-admin/fb"; //Firebase SDK
 dotenv.config(); //Initialize it
 
 //Connect to the database
@@ -17,6 +18,13 @@ mongoose
   });
 
 const app = express();
+
+// TODO: Replace the following with your app's Firebase project configuration
+const firebaseConfig = {
+  //...
+};
+
+const fb = initializeApp(firebaseConfig);
 
 //Listen to port number
 app.listen(3000, () => {
