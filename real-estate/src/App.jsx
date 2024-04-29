@@ -1,10 +1,12 @@
-//import { useState } from "react";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Welcome from "./components/pages/Welcome";
+import Creators from "./components/Creators";
+import Signup from "./components/pages/Signup";
+import Login from "./components/pages/Login";
 
-import Signup from "./pages/Signup";
-import Login from "./pages/Login";
-import Home from "./pages/Home";
+import "./App.css";
 
 function App() {
   return (
@@ -12,7 +14,8 @@ function App() {
       <Routes>
         <Route path="/register" element={<Signup />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/creators" element={<Creators />} />
+        <Route path="/" element={<Welcome />} />
       </Routes>
     </BrowserRouter>
   );
