@@ -1,17 +1,18 @@
-const express = require("express");
+import express from "express";
 const app = express();
-const cors = require("cors");
+import cors from "cors";
 
-const config = require("./config/index.mjs");
-const db = require("./config/db.mjs");
-//const userRouter = require("./api/user.mjs");
+import config from "./config/index.mjs";
+import db from "./config/db.mjs";
+import userRouter from "./api/user.mjs";
 
 db(config.MONGO_URI, app);
 
 app.use(cors({ origin: true }));
 app.use(express.json());
 
-//app.use("/api/user", userRouter);
+app.use("/api/user", userRouter);
+
 app.get("/", (req, res) => {
   res.render("login");
 });

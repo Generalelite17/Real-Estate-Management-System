@@ -1,5 +1,5 @@
 import admin from "firebase-admin";
-import config from "./config/index.mjs";
+import config from "../config/index.mjs";
 
 const serviceAccount = {
   project_id: config.FIREBASE_PROJECT_ID,
@@ -15,6 +15,7 @@ const serviceAccount = {
 
 const firebase = admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
+  //databaseURL: "https://<DATABASE_NAME>.firebaseio.com",
 });
 
 export default {
