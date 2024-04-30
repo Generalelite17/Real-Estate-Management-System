@@ -2,7 +2,7 @@ import React from "react";
 
 function Welcome() {
   return (
-    <div className="welcome-container">
+    <div className="welcome-container text-center text-3xl font-bold">
       <h1>Welcome to Our App</h1>
       <p>Get started by signing up or logging in.</p>
       <div className="button-container">
