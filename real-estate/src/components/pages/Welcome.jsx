@@ -2,9 +2,14 @@ import React from "react";
 
 function Welcome() {
   return (
-    <center>
-      <h1>This is Home Component</h1>
-    </center>
+    <div className="welcome-container">
+      <h1>Welcome to Our App</h1>
+      <p>Get started by signing up or logging in.</p>
+      <div className="button-container">
+        <button className="signup-button">Sign Up</button>
+        <button className="login-button">Login</button>
+      </div>
+    </div>
   );
 }
 
