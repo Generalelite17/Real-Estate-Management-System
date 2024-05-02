@@ -1,5 +1,5 @@
 import React from "react";
-import "./Contact.css";
+import "../Contact/Contact.css";
 import { MdCall } from "react-icons/md";
 import { BsFillChatDotsFill } from "react-icons/bs";
 import {HiChatBubbleBottomCenter} from 'react-icons/hi2'
