@@ -6,7 +6,7 @@ import {
   getAllBookings,
   getAllFavorites,
   toFav,
-} from "../controllers/userCntrl.js";
+} from "../controllers/userController.js";
 //Using firebase later
 import jwtCheck from "../config/auth0Config.js";
 const router = express.Router();
